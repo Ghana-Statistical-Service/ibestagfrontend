@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+    --card-height: 5.51in;
+    --card-width: 3.66in;
+}
+*{
+    font-family: "Montserrat", sans-serif;
+}
+
+
+.row-flex.gap{gap: 2rem !important;}
+
+.card {
+    width: var(--card-width);
+    border-radius: 1rem;
+    height: var(--card-height);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card.front{overflow: hidden;}
+
+.header {
+    color: #fff;
+    text-align: center;
+    background-image: url('/images/top-bg.png');
+    background-repeat: no-repeat;
+    background-size:110% 100%;
+    height: 270px;
+    padding: 1.5rem 1rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.printBtn{
+    position: fixed !important;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 100;
+}
+
+.logos {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.logos img {
+    height: 40px;
+}
+
+.photo-section {
+    display: flex;
+    justify-content: center;
+}
+
+.photo-section .photo {
+    height: 180px;
+    border-radius: 10px;
+    border: 2px solid #DDDDDD;
+    margin-top: -100px;
+}
+
+.footer {
+border-bottom-right-radius: 1rem !important;
+border-bottom-left-radius: 1rem;
+background-image: url('/images/down-bg.png');
+height: 60px;
+background-repeat: no-repeat;
+background-size:100% 100%;
+}
+
+.back_card{
+    padding: 2rem 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.5rem;
+    height: var(--card-height);
+    width: var(--card-width);
+}
+
+.pagination-button {
+    border: none !important;
+}
+
+.photo{max-width: 200px;
+    border: 1px solid #202020;
+}
