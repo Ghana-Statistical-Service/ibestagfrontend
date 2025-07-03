@@ -66,10 +66,10 @@ export default function Home() {
    <div className="section">
       <RowFlexUi gap={0.5} justify="">
       <img src="/images/1.png" className="height-30" alt="Logo 1" />
-            <img src="/images/2.png" className="height-30" alt="Logo 2" />
+            <img src="/images/ibes.png" className="height-30" alt="Logo 2" />
             <img src="/images/3.png" className="height-30" alt="Logo 3" />
-            <img src="/images/4.png" className="height-30" alt="Logo 4" />
-            <img src="/images/5.png" className="height-30" alt="Logo 5" />
+            {/* <img src="/images/4.png" className="height-30" alt="Logo 4" />
+            <img src="/images/5.png" className="height-30" alt="Logo 5" /> */}
       </RowFlexUi>
    </div>
 <div className="margin-bottom-40">
