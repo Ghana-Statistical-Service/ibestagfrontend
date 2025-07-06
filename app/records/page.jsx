@@ -189,23 +189,69 @@ export default function Record() {
    }
 }
 
+// const Pagination = ({ currentPage, totalPages, onPageChange }) => {
+//     const pages = [];
+
+//     for (let i = 1; i <= totalPages; i++) {
+//         pages.push(
+//             <button
+//                 key={i}
+//                 onClick={() => onPageChange(i)}
+//                 className={`pagination-button central roundEdge pointer padding-5 ${i === currentPage ? 'primary' : ''}`}
+//             >
+//                 {i}
+//             </button>
+//         );
+//     }
+
+//     return (
+//         <div style={{ overflowX: 'auto',  padding: '10px 0' }}>
+//             {pages}
+//         </div>
+//     );
+// };
+
 const Pagination = ({ currentPage, totalPages, onPageChange }) => {
     const pages = [];
+    const pagesPerGroup = 50;
+    const currentGroup = Math.ceil(currentPage / pagesPerGroup);
 
-    for (let i = 1; i <= totalPages; i++) {
+    const startPage = (currentGroup - 1) * pagesPerGroup + 1;
+    const endPage = Math.min(startPage + pagesPerGroup - 1, totalPages);
+
+    for (let i = startPage; i <= endPage; i++) {
         pages.push(
             <button
                 key={i}
                 onClick={() => onPageChange(i)}
-                className={`pagination-button central roundEdge pointer padding-5 ${i === currentPage ? 'primary' : ''}`}
+                className={`pagination-button central roundEdge pointer padding-5 margin-right-5 ${i === currentPage ? 'primary' : ''}`}
             >
                 {i}
             </button>
         );
     }
 
-    return <div className="row-flex central section">
-{pages} 
-    </div>;
-};
+    return (
+        <div className="row-flex central section" style={{ flexWrap: 'wrap', gap: '5px' }}>
+            {startPage > 1 && (
+                <button
+                    onClick={() => onPageChange(startPage - 1)}
+                    className="pagination-button central roundEdge pointer padding-5"
+                >
+                    Previous
+                </button>
+            )}
 
+            {pages}
+
+            {endPage < totalPages && (
+                <button
+                    onClick={() => onPageChange(endPage + 1)}
+                    className="pagination-button central roundEdge pointer padding-5"
+                >
+                    Next
+                </button>
+            )}
+        </div>
+    );
+};
