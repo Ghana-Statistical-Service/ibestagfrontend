@@ -17,6 +17,7 @@ export default function CardFront({ data, profile, email }) {
  
   return (
     <div className="card front" style={{ border: '2px solid #2E2A8F', width: '350px', fontFamily: 'Arial, sans-serif', position: 'relative' }}>
+
     
       <header>
         <div className='padding' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '5px' }}>
@@ -45,7 +46,7 @@ export default function CardFront({ data, profile, email }) {
 <div className='padding' style={{position:'relative'}}>
    {/* QR CODE TO BE FIXED HERE */}
       <div className='' style={{ width:"fit-content"}}>
-          <img src={`${qr}`} alt="QR Code" style={{ width: '80px', height: '80px', position:"absolute" ,left:"-0.5rem"
+          <img src={`${qr}`} alt="QR Code" style={{ width: '75px', height: '75px', position:"absolute" ,left:"-0.9rem"
 
            }} />
       </div>
