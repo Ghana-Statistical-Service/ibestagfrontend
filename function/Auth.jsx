@@ -18,7 +18,7 @@ export const GetToken = () => {
                 }
             )
         }else{
-             window.location.assign("/")
+            //  window.location.assign("/")
         }
     })
 }
